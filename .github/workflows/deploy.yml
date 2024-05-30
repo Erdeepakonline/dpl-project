@@ -17,9 +17,9 @@ jobs:
     - name: Deploy to FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: deepaktst.7searchppc.in
-        username: admin_deepak
-        password: 1akqcMcieIlF38Aq
+        server: ${{secrets.DEPLOY_SERVER_NAME}}
+        username: ${{secrets.DEPLOY_SERVER_USERNAME}}
+        password: ${{secrets.DEPLOY_SERVER_PASSWORD}}
         server-dir: '/public_html/'
         port: 21
         protocol: ftps
